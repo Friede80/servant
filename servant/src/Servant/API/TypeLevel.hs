@@ -64,6 +64,10 @@ import           Servant.API.QueryParam
                  (QueryFlag, QueryParam, QueryParams)
 import           Servant.API.ReqBody
                  (ReqBody)
+import           Servant.API.NamedRoutes
+                 (NamedRoutes)
+import           Servant.API.Generic
+                 (ToServantApi)
 import           Servant.API.Sub
                  (type (:>))
 import           Servant.API.Verbs
