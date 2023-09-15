@@ -146,6 +146,7 @@ type family IsElem endpoint api :: Constraint where
   IsElem (Verb m s ct typ) (Verb m s ct' typ)
                                           = IsSubList ct ct'
   IsElem e e                              = ()
+  IsElem e (NamedRoutes rs)               = IsElem e (ToServantApi rs)
   IsElem e a                              = IsElem' e a
 
 -- | Check whether @sub@ is a sub-API of @api@.
